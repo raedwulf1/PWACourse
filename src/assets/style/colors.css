@@ -1,0 +1,36 @@
+/*
+material palette, red + indigo
+dark primary red: #D32F2F
+light primary red: #FFCDD2
+primary: #F44336
+text, icons: #FFFFFF
+accent: #536DFE
+primary text: #212121
+secondary text: #757575
+divider: #BDBDBD */
+
+body{
+    background-color: #F44336;
+    color: #212121;
+}
+.card{
+    background-color: #FFCDD2;
+    color: #212121;
+}
+
+.card.width-badge span{
+    background-color: #D32F2F;
+    color: #FFFFFF;
+}
+
+.blue{
+    background-color: #536DFE;
+}
+
+.light-text{
+    color: #FFFFFF;
+}
+
+.todo-card::after{
+    color: #536DFE;
+}

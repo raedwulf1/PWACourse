@@ -1,0 +1,6 @@
+
+<app-todos-creator [id]="listId"></app-todos-creator>
+
+<!-- <div [@enterState]="(todos | async)?.length"> -->
+<app-todo-card *ngFor="let todo of todos | async; trackBy: trackTodoObjects" [todo]="todo" [listId]="listId" @enterState></app-todo-card>
+<!-- </div> -->

@@ -1,0 +1,15 @@
+<!-- El trigguer de animation, se coloca en el elemento padre, en caso de ser por transiciones, en caso de
+        eu sea todos en conjunto, se puede colocar en el elemento con el ngfor, Nota no sirve con Query y stagger -->
+<!-- <div class="large-padding" [@enterState]="(listS.lists | async)?.length"> -->
+        <div class="large-padding">
+    <div *ngFor="let list of listS.lists | async" @enterState>
+        <a routerLink="lists/{{list.id}}" >
+            <article class="card block large-padding top-space width-badge">
+                    <h4>{{list.title}}</h4>
+                    <div class="badge">
+                        <span>0</span>
+                    </div>
+            </article>
+        </a>
+    </div>
+</div>

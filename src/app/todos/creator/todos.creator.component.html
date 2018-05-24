@@ -1,0 +1,27 @@
+<div class="text-right">
+    <button type="button" class="large-padding, pointer no-background light-text" (click)="toogleForm()">
+        {{label()}}
+        <i class="fa {{icon()}}"></i>
+    </button>
+
+</div>
+
+
+<div class="lateral-padding overflow-hidden" [@openClose]="formState">
+    <input type="text" placeholder="Que vas a Hacer?" class="form-control" required min="3" [(ngModel)]="todo.content">
+    <textarea class="form-control" placeholder="Informacion Adicional (Opcional)"[(ngModel)]="todo.description"></textarea>
+    <div class="top-space">
+            <div class="date--time-picker">
+
+                    <input type="text" placeholder="Fecha Limite (opcional)" class="form-control" [owlDateTime]="dt" 
+                    [owlDateTimeTrigger]="dt" [(ngModel)]="todo.expiresAt">
+                
+                    <owl-date-time #dt></owl-date-time>
+                </div>
+            <button type="button" class="btn blue light-text full-width top-space" (click)="save()">
+                <i class="fa fa-save">
+                    Guardar
+                </i>
+            </button>
+        </div>
+</div>
