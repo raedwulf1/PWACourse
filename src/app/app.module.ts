@@ -26,6 +26,7 @@ import { TodosService } from './services/todos.service';
 import { TodoCardComponent } from './todos/card/todo.card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { PushNotificationsService } from './services/pushNotifications.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AuthGuard,
     UserService,
     ListsService,
-    TodosService
+    TodosService,
+    PushNotificationsService
   ],
   bootstrap: [AppComponent]
 })
